@@ -1,0 +1,6 @@
+[project]
+name = "comfyui-hajijian"
+version = "1.0.0"
+description = "A pixel-maid companion for manual ComfyUI RAM and VRAM cleanup."
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
