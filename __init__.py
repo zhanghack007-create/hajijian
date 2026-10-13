@@ -36,3 +36,13 @@ async def clean(request):
         except Exception:
             logging.exception('[哈基简] 清理失败')
             return web.json_response({'error': '清理未完成，请查看 ComfyUI 日志。'}, status=500)
+
+
+# Four workflow nodes; the original cleanup UI and endpoint are unchanged.
+from .reference_nodes import NODE_CLASS_MAPPINGS as REFERENCE_NODES
+from .reference_nodes import NODE_DISPLAY_NAME_MAPPINGS as REFERENCE_NAMES
+from .canvas_nodes import NODE_CLASS_MAPPINGS as CANVAS_NODES
+from .canvas_nodes import NODE_DISPLAY_NAME_MAPPINGS as CANVAS_NAMES
+NODE_CLASS_MAPPINGS.update(REFERENCE_NODES)
+NODE_CLASS_MAPPINGS.update(CANVAS_NODES)
+NODE_DISPLAY_NAME_MAPPINGS = {**REFERENCE_NAMES, **CANVAS_NAMES}

@@ -1,6 +1,7 @@
 [project]
 name = "comfyui-hajijian"
-version = "1.0.0"
-description = "A pixel-maid companion for manual ComfyUI RAM and VRAM cleanup."
+version = "1.1.0"
+description = "ComfyUI cleanup companion, reference constraints and exact-size canvas workflow nodes."
 requires-python = ">=3.10"
 license = { file = "LICENSE" }
+dependencies = ["numpy", "mediapipe>=0.10.14", "psutil", "aiohttp"]
